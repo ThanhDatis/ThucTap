@@ -1,0 +1,369 @@
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+   
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header-container {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-weight: bold;
+}
+
+.header-nav-c {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.header-nav {
+flex: 1;
+display: flex;
+justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+
+}
+
+.nav-item {
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-item:hover {
+  color: #007bff;
+}
+
+.header-sign {
+  display: flex;
+  align-items: center;
+}
+
+.login-button {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.login-button:hover {
+background-color: #007bff;
+color: white;
+}
+#heroCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 70%);
+}
+
+/* Căn lề cho section */
+/* Container toàn bộ section */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  /* display: flex; */
+}
+
+/* Bố cục chia 2 cột */
+.section-container-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* gap: 40px; */
+  flex-wrap: wrap;
+}
+
+.column-1-title {
+  flex: 1;
+  min-width: 300px;
+}
+
+.column-2-title {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Header caption */
+.header-caption-c {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dòng thông báo trên cùng */
+.caption-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3); /* Gradient tím */
+  border-radius: 999px; /* Bo tròn như viên thuốc */
+  padding: 6px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.caption-date-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10 px;
+}
+
+.caption-link {
+  color: #0a2540;
+  text-decoration: none;
+  position: relative;
+}
+
+.caption-link:hover {
+  color: #0a2540;
+}
+
+.caption-link:hover .hover-arrow {
+  transform: translateX(3px);
+}
+
+/* Mũi tên SVG */
+.hover-arrow {
+  margin-left: 4px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  transition: transform 0.3s ease;
+}
+
+/* Tiêu đề chính */
+.header-caption-title {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 700px;
+  color: #0a2540;
+}
+
+/* Mô tả */
+.describe-body {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 650px;
+  color: #425466;
+}
+
+/* Footer */
+.caption-footer {
+  margin-top: 30px;
+}
+
+.footer-c {
+  display: flex;
+  gap: 20px;
+}
+
+/* Phần hình ảnh bên phải */
+.col-2-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  height: 100%;
+}
+.col-2-image img {
+  /* width: 100%; */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .section-container-layout {
+    flex-direction: column;
+  }
+}
+
+/* COLUMN 2*/
+/* .graphic-phone {
+  background: #fff;
+  border-radius: 20px;
+  width: 320px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0 auto;
+}
+
+.g-p-screen {
+  display: flex;
+  align-items: center;
+}
+.g-p-checkout {
+  width: 320px;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+.p-checkout-image .image-container {
+  width: 80px;
+  height: 120px;
+  background: linear-gradient(135deg, #9c27b0, #fbc02d);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.p-checkout-description {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.p-checkout-price {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.p-checkout-btnContainer {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.apple-payBtn,
+.p-checkout-cardPay {
+  background-color: #0a0a0a;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.p-checkout-separator {
+  font-size: 13px;
+  color: #999;
+  margin: 16px 0 8px;
+  position: relative;
+}
+.separator-title {
+  text-align: center;
+}
+
+.p-checkout-separator::before,
+.p-checkout-separator::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  width: 25%;
+  height: 1px;
+  background: #ccc;
+}
+
+.p-checkout-separator::before {
+  left: 0;
+}
+
+.p-checkout-separator::after {
+  right: 0;
+}
+
+.p-checkout-input,
+.p-checkout-input-country {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.p-checkout-input input,
+.p-checkout-input-country input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.p-checkout-input-cards,
+.p-checkout-input-country {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.p-checkout-number {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+.p-checkout-bottom-row {
+  display: flex;
+  gap: 8px;
+}
+.p-checkout-placeholder-date,
+.p-checkout-placeholder,
+.p-checkout-placeholder-cvc {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+}
+.p-checkout-placeholder-date,
+.p-checkout-placeholder-cvc {
+  display: grid;
+  grid: auto (2, 1fr);
+}
+.p-checkout-placeholder-country i {
+  float: right;
+  margin-left: 6px;
+} */

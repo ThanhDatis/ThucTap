@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+        <div class="header-nav-c">
+            <h1 class="header-logo">
+                Hoo le
+            </h1>
+            <div class="header-nav">
+                <nav class="nav-list-item">
+                    <ul class="nav-list">
+                        <li class="nav-item">Products</li>
+                        <li class="nav-item">Solutions</li>
+                        <li class="nav-item">Developers</li>
+                        <li class="nav-item">Resources</li>
+                        <li class="nav-item">Pricing</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-sign">
+                <div class="header-login">
+                    <a class="login-button">
+                        Sign in
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-background">
+        <div class="hero-section-background">
+            <canvas id="heroCanvas">
+            </canvas>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="section-container-layout column-layout">
+            <div class="column-1-title">
+                <header class="header-caption-c">
+                    <div class="caption-date-describe">
+                        <div class="caption-date">
+                            <span class="caption-date-title caption-link">
+                                <a>
+                                    Sessions 2025&nbsp;·&nbsp;May&nbsp;&nbsp;6-8
+                                    <span class="caption-separator">·&nbsp;</span>
+                                    <a class="caption-link" href="#">
+                                        Last chance to register
+                                        <svg class="hover-arrow"
+                                        width="10"
+                                        height="10"
+                                        viewBox="0 0 10 10"
+                                        aria-hidden="true">
+                                            <g fill-rule="evenodd">
+                                                <path class="hover-arrow_linePath" d="M0 5h7"></path>
+                                                <path class="hover-arrow_tipPath" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg> 
+                                    </a>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                    <h1 class="header-caption-title">
+                        Financial infrastructure to grow your revenue
+                    </h1>
+                    <div class="describe-body">
+                        Join the millions of companies that use Stripe to accept payments online and in person, 
+                        embed financial services, power custom revenue models, 
+                        and build a more profitable business.
+                    </div>
+                    <div class="caption-footer footer-c f-c-start f-c-email">
+                        <div class="footer-c">
+                            <div class="f-c-start">
+                                <!-- <button></button> -->
+                            </div>
+                            <div class="f-c-email">
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            <div class="column-2-title">
+                <div class="col-2-image">
+                    <img src="assets/images/ảnh mẫu.jpg" alt="Ảnh minh họa">
+                </div>
+                <!-- <div class="dashboard-graphic graphic-company graphic-header">
+                    <div class="d-g graphic-company">
+                        <div>
+                            <i class="ti-pin"></i>
+                        </div>
+                        Rocket Rides
+                        <div>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="d-g graphic-header">
+                            <div class="d-g-searchBar d-g-searchIcon">
+                                    <i class="ti-search"></i>
+                                    Search
+                            </div>
+                            <div class="d-g-Icon">
+                                <i class="ti-bell"></i>
+                                <i class="ti-help-alt"></i>
+                                <i class="ti-user"></i>
+                            </div>
+                        </div>
+                        <div class="d-g graphic-body">
+                            <div class="d-g-content">
+                                <div class="d-g-topSection">
+                                    <div class="d-g-title">
+                                        <span>Today</span>
+                                    </div>
+                                    <div class="d-g-section-today">
+                                        <div class="d-g-section-today-left">
+                                            <div class="d-g-netVolume-layout">
+                                                <div>
+                                                    <div class="d-g-flexGroup-gap">
+                                                        <span class="d-g-copy-small">
+                                                            <b>
+                                                                Net volume
+                                                            </b>
+                                                        </span>
+                                                        <i class="ti-angle-down"></i>
+                                                    </div>
+                                                    <div class="d-g-copy-large">
+                                                        $3,528,198.72
+                                                    </div>
+                                                    <div class="d-g-copy-xSmall">
+                                                        2:00 PM
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="d-g-flexgroup-gap">
+                                                        <span class="d-g-copy-small">
+                                                            <b>
+                                                                Yesterday
+                                                            </b>
+                                                        </span>
+                                                        <i class="ti-angle-down"></i>
+                                                    </div>
+                                                    <div class="d-g-copy-xSmall">
+                                                        $2,931,556.34
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div></div>
+                                        </div>
+                                        <div class="c-topSection-today-right"></div>
+                                    </div>
+                                </div>
+                                <div class="content-bottomSection">
+                                    <div class="c-bottomSection-title">
+                                        <span>Tomorrow</span>
+                                    </div>
+                                    <div class="c-bottomSection-today">
+                                        <span>Văn bản không thể có đề cập</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-g-sidebar">
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <figure class="graphic-phone" aria-hidden="true">
+                    <div class="g-p-screen">
+                        <div class="g-p-checkout">
+                            <div class="p-checkout-image">
+                                <div class="image-container">
+                                    ưbvbuveinv
+                                </div>
+                            </div>
+                            <div class="p-checkout-description">
+                                Abstraction Magazine
+                            </div>
+                            <div class="p-checkout-price">
+                                $19 per month
+                            </div>
+                            <div class="p-checkout-btnContainer">
+                                <div class="p-checkout-btnC apple-payBtn">
+                                    <i class="ti-apple"></i>
+                                    Pay
+                                </div>
+                            </div>
+                            <div class="p-checkout-separator separator-title">
+                                <div class="separator-title"> Or pay with card </div>
+                            </div>
+                            Email
+                            <div class="p-checkout-input"></div>
+                            Card Information
+                            <div class="p-checkout-input-cards">
+                                <div class="p-checkout-placeholder">
+                                    Number
+                                </div>
+                                <div class="p-checkout-placeholder-date">
+                                    mm / yy
+                                </div>
+                                <div class="p-checkout-placeholder-cvc">
+                                    CVC
+                                </div>
+                            </div>
+                            Country or region
+                            <div class="p-checkout-input-country">
+                                <div class="p-checkout-placeholder">
+                                    United States
+                                    <i class="ti-angle-down"></i>
+                                </div>
+                                <div class="p-checkout-placeholder">
+                                    ZIP
+                                </div>
+                            </div>
+                            <div class="p-checkout-cardPay">
+                                Pay
+                            </div>
+                        </div>
+                    </div>
+                </figure> -->
+            </div>
+        </div>
+    </div>
+    <!-- <h1>Hello, world!</h1> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
