@@ -20,13 +20,10 @@ body {
 
 .header-container {
   width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
   font-weight: bold;
 }
 
-.header-nav-c {
+.header-container-nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
@@ -34,10 +31,9 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-
 }
 
-.header-logo {
+.header-container-logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
@@ -50,7 +46,7 @@ display: flex;
 justify-content: center;
 }
 
-.nav-list {
+.nav-list-item {
   list-style: none;
   display: flex;
   gap: 60px;
@@ -67,25 +63,40 @@ justify-content: center;
   color: #007bff;
 }
 
-.header-sign {
+.header-sign-in {
   display: flex;
   align-items: center;
 }
-
+.heaeder-sign-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #555;
+  
+}
 .login-button {
-  padding: 0.5rem 1rem;
   background-color: transparent;
-  color: #007bff;
-  border: 1px solid #007bff;
-  border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s;
-  cursor: pointer;
+  color: #555;
+  /* cursor: pointer; */
 }
 
 .login-button:hover {
-background-color: #007bff;
-color: white;
+/* background-color: #007bff; */
+/* color: white; */
+}
+/* Nút Contact Sales */
+.header-btn-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background-color: #fff;
+  color: #f44336;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 #heroCanvas {
   position: absolute;
@@ -218,10 +229,62 @@ color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive cho mobile */
+/* Responsive */
+@media (max-width: 768px) {
+  .header-nav-c {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-nav {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .header-sign {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .login-button {
+    width: 100%;
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .section-container-layout {
     flex-direction: column;
+  }
+
+  .header-caption-title {
+    font-size: 36px;
+  }
+
+  .describe-body {
+    font-size: 16px;
+  }
+
+  .col-2-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .caption-date {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .footer-c {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
