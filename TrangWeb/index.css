@@ -1,4 +1,3 @@
-
 /* * {
     margin: 0;
     padding: 0;
@@ -11,39 +10,37 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #fff;
   text-align: left;
-  background-color: #fff;
+  /* background-color: #fff; */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
 .header-container {
+  display: flex;
+  /* justify-content: space-between; */
   width: 100%;
+  align-items: center;
   font-weight: bold;
 }
 
 .header-container-nav {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  /* padding: 10px 25px; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 16px;
+  gap: 40px;
 }
 
 .header-container-logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
   cursor: pointer;
 }
 
 .header-nav {
-flex: 1;
-display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .nav-list-item {
@@ -54,50 +51,59 @@ justify-content: center;
 }
 
 .nav-item {
-  color: #555;
   cursor: pointer;
   transition: color 0.2s;
 }
 
-.nav-item:hover {
-  color: #007bff;
+.header-sign-btn {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
 }
 
-.header-sign-in {
-  display: flex;
-  align-items: center;
-}
-.heaeder-sign-btn {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  color: #555;
-  
-}
 .login-button {
-  background-color: transparent;
-  text-decoration: none;
-  color: #555;
-  /* cursor: pointer; */
+    text-decoration: none;
+    color: #fff;
+}
+.nav-item:hover,
+.login-button:hover,
+.caption-link-register:hover {
+  color: rgba(255, 255, 255, 0.7); /* màu trắng mờ hơn */
+}
+.header-btn {
+    display: flex;
+    align-items: center;
 }
 
-.login-button:hover {
-/* background-color: #007bff; */
-/* color: white; */
-}
 /* Nút Contact Sales */
 .header-btn-arrow-right {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 16px;
-  border-radius: 999px;
-  background-color: #fff;
-  color: #f44336;
-  text-decoration: none;
-  cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 600;
+  padding: 7px 15px;
 }
+
+.hover-arrow {
+  transition: stroke-dashoffset 0.3s ease;
+  opacity: 0.8;
+}
+
+.hover-arrow_linePath {
+  stroke: transparent;
+  stroke-width: 2;
+}
+
+.header-btn-arrow-right:hover .hover-arrow_linePath,
+.caption-link:hover .hover-arrow_linePath,
+.login-button:hover .hover-arrow_linePath,
+.input-btn-arrow-right:hover .hover-arrow_linePath {
+  stroke: currentColor;
+} 
+
 #heroCanvas {
   position: absolute;
   top: 0;
@@ -148,9 +154,9 @@ justify-content: center;
 .caption-date {
   font-size: 14px;
   font-weight: 600;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3); /* Gradient tím */
-  border-radius: 999px; /* Bo tròn như viên thuốc */
+  /* color: #fff; */
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
   padding: 6px 18px;
   display: inline-flex;
   align-items: center;
@@ -164,24 +170,24 @@ justify-content: center;
   flex-wrap: wrap;
   gap: 10 px;
 }
-
-.caption-link {
-  color: #0a2540;
-  text-decoration: none;
+.caption-date-title.caption-link {
   position: relative;
 }
-
-.caption-link:hover {
-  color: #0a2540;
+.caption-link-register {
+  color: #fff;
+  text-decoration: none;
 }
 
-.caption-link:hover .hover-arrow {
+.caption-link:hover .hover-arrow,
+.header-btn-arrow-right:hover .hover-arrow,
+.login-button:hover .hover-arrow,
+.input-btn-arrow-right:hover .hover-arrow {
   transform: translateX(3px);
 }
 
 /* Mũi tên SVG */
 .hover-arrow {
-  margin-left: 4px;
+  margin-left: 5px;
   stroke: currentColor;
   fill: none;
   stroke-width: 1.5;
@@ -205,16 +211,50 @@ justify-content: center;
   color: #425466;
 }
 
-/* Footer */
-.caption-footer {
-  margin-top: 30px;
+/* Email input */
+.email-input {
+  min-width: 345px;
+  border: none;
+  height: 20px;
+  flex: 1;
 }
-
-.footer-c {
-  display: flex;
-  gap: 20px;
+.email-input-c {
+  flex: 1;
+  width: 502px;
 }
-
+.email-input-c-b:has(input:focus) {
+  box-shadow: 0 0 0 2px rgba(10, 37, 64, 0.6);
+}
+.email-input-c-b {
+  border-radius: 999px;
+  padding: 6px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.email-input-c input[type="email"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 999px;
+  background-color: transparent;
+  min-width: 325px;
+}
+.input-btn-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 999px;
+  background: #0a2540;
+  color: #fff;
+  font-weight: 600;
+  padding: 7px 15px;
+}
+.input-btn-arrow-right:hover {
+  backdrop-filter: blur(4px);
+  background-color: rgb(54, 60, 179);
+}
 /* Phần hình ảnh bên phải */
 .col-2-image {
   display: flex;
@@ -228,18 +268,56 @@ justify-content: center;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+/* GRID-LAYOUT*/
+.section-logo-grid-theme {
+  /* padding: 20px 0; */
+}
 
+.section-masked {
+  overflow: hidden;
+}
+
+.section-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-layoutContainer {
+  width: 100%;
+}
+.section-layout {
+  /* padding-top: 40px; */
+  padding: 40px 0 40px ;
+}
+.logo-grid--variant {
+  display: grid;
+  --gridColumnCount: 2;
+  --gridRowGap: 40px;
+  grid: auto / repeat(var(--gridColumnCount), 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: var(--gridRowGap);
+}
 /* Responsive */
+@media (min-width: 768px) {
+  .logo-grid--variant {
+    --gridColumnCount: 4;
+  }
+}
+
 @media (max-width: 768px) {
   .header-nav-c {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    /* flex-wrap: wrap; */
   }
 
   .header-nav {
     justify-content: flex-start;
     width: 100%;
+    flex-direction: column;
   }
 
   .nav-list {
@@ -248,14 +326,19 @@ justify-content: center;
     padding-left: 0;
   }
 
-  .header-sign {
+  .header-sign-btn {
     justify-content: flex-start;
     width: 100%;
+    flex-wrap: wrap;
   }
 
   .login-button {
     width: 100%;
     text-align: center;
+  }
+
+  .nav-item {
+    padding: 10px 0;
   }
 }
 @media (max-width: 768px) {
