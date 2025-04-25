@@ -7,7 +7,7 @@
   --fontHasTitle: 16px;
   --bodyFont: 18px;
   --layoutWidthMax: 1080px;
-  --columnPaddingNormal: 10px;
+  --columnPaddingNormal: 20px;
   --headerPaddingRight: 50px;
   --headerPaddingLeft: 24px;
   --primaryColor: #0a2540;
@@ -243,7 +243,7 @@ body {
 }
 
 .header-btn-arrow-right:hover .hover-arrow_linePath,
-.caption-link:hover .hover-arrow_linePath,
+.caption-link-register:hover .hover-arrow_linePath,
 .login-button:hover .hover-arrow_linePath,
 .input-btn-arrow-right:hover .hover-arrow_linePath {
   stroke-dashoffset: 0;
@@ -479,7 +479,7 @@ body {
 /* Copy component */
 .Copy.variant--Hero {
   row-gap: var(--rowGap);
-  --titleFontSize: 34px;
+  --titleFontSize: 44px;
   --titleLineHeight: 56px;
   --titleWeight: 500;
   --titleColor: var(--primaryColor);
@@ -495,6 +495,17 @@ body {
 .Copy, .Copy-header {
   display: grid;
   row-gap: var(--rowGap);
+}
+.section-container-layout-1.Copy-caption {
+  height: 0;
+}
+.HomePageFrontdoor_copyCaption {
+  display: flex;
+  align-items: center;
+}
+
+.HomePageFrontdoor_copyCaption svg {
+  margin-right: 8px;
 }
 .Copy-title {
   font-size: var(--titleFontSize);
@@ -976,3 +987,5 @@ body.menu-open::after {
     opacity: 1;
   }
 }
+
+
