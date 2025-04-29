@@ -124,6 +124,9 @@ body {
 }
 .nav-item {
   cursor: pointer;
+  display: flex;
+  gap: 5px;
+  align-items: center;
   transition: all var(--mainTransition);
   text-decoration: none;
   color: var(--lightColor);
@@ -146,7 +149,12 @@ body {
 .nav-item:hover::after {
   width: 100%;
 }
-
+.nav-item-svg {
+  transition: transform 0.6s ease;
+}
+.nav-item:hover .nav-item-svg {
+  transform: rotateX(180deg);
+}
 .nav-item:hover,
 .login-button:hover,
 .caption-link-register:hover {
